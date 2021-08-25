@@ -1,0 +1,21 @@
+version: "3.7"
+
+services:
+  workspace:
+    build:
+      context: ./docker/workspace
+      args:
+        USERNAME: "vscode"
+        USER_UID: 1000
+        USER_GID: 1000
+    tty: true
+    ports:
+      - "${DOCKER_DESKTOP_IP_ADDRESS_SETTING}8080:8080"
+      - "${DOCKER_DESKTOP_IP_ADDRESS_SETTING}3000:3000"
+      - "${DOCKER_DESKTOP_IP_ADDRESS_SETTING}80:80"
+    volumes:
+      - ../:/var/www
+    environment:
+      TZ: Asia/Tokyo
+      DISPLAY: "host.docker.internal:0"
+    working_dir: /var/www

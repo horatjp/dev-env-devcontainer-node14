@@ -1,0 +1,28 @@
+{
+	"name": "node14",
+
+	"dockerComposeFile": [
+		"docker-compose.yml"
+  ],
+
+    "service": "workspace",
+    "workspaceFolder": "/var/www",
+    "remoteUser": "vscode",
+
+	"settings": {
+    },
+
+    "extensions": [
+        "CoenraadS.bracket-pair-colorizer-2",
+        "streetsidesoftware.code-spell-checker",
+        "mikestead.dotenv",
+        "EditorConfig.EditorConfig",
+        "mhutchie.git-graph",
+        "eamodio.gitlens",
+        "emilast.LogFileHighlighter",
+        "mechatroner.rainbow-csv",
+        "chrmarti.regex",
+        "Gruntfuggly.todo-tree",
+        "funkyremi.vscode-google-translate"
+    ]
+}
